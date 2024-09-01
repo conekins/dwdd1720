@@ -20,3 +20,45 @@ header h1 {
     font-size: 1rem;
     padding-left: .5rem;
 }
+
+main {
+    margin: 1rem 2%;
+}
+
+section.who {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+section.who p {
+    margin: 0;
+}
+
+section.about {
+    display: flex;
+    background-color: #303030;
+    padding: .5rem;
+}
+section.about div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    margin-left: .5rem;
+    width: 100%;
+}
+section.about p{
+    margin: 0;
+}
+section.about div ul {
+    background-color: #393939;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0;
+    padding: .5rem;
+    list-style-position: inside;
+    box-shadow: inset 0 0 10px #131313;
+}
+h2 {
+    font-size: 1rem;
+}
