@@ -62,3 +62,45 @@ section.about div ul {
 h2 {
     font-size: 1rem;
 }
+
+.assignments {
+    padding: 1rem 2%;
+}
+.assignments a {
+    color: #303030;
+    background-color: #eee;
+    display: block;
+    padding: .8rem;
+    margin-bottom: .5rem;
+    border: 1px solid #aaa;
+    border-radius: 7.5px;
+    text-decoration: none;
+    background-image: url(../images/arrow2.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 92% center;
+    transition: .5s;
+}
+.assignments a:hover {
+    background-position: 96% center;
+    background-color: #ddd;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #303030;
+    color: #fff;
+    padding: .75rem;
+    text-align: center;
+}
+footer a {
+    color: #00da1dd3;
+    transition: .5s;
+}
+footer a:hover {
+    color: #2fff4bd3;
+}

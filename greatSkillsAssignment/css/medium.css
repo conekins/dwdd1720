@@ -11,4 +11,9 @@ section.who {
 h2 {
     font-size: 1.5rem;
 }
+
+.assignments {
+    column-count: 2;
+}
+
 } /* end media query*/
