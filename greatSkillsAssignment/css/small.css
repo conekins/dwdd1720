@@ -43,7 +43,7 @@ section.about div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: white;
+    color: #fff;
     margin-left: .5rem;
     width: 100%;
 }
@@ -67,8 +67,8 @@ h2 {
     padding: 1rem 2%;
 }
 .assignments a {
-    color: #303030;
-    background-color: #eee;
+    color: #fff;
+    background-color: #303030;
     display: block;
     padding: .8rem;
     margin-bottom: .5rem;
