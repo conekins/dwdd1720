@@ -31,13 +31,33 @@ h2 {
 
 #incrementBtn {
     background-color: #00c900;
+    transition: .10s;
 }
+#incrementBtn:active {
+    background-color: #0ff00f;
+}
+
+
 #decrementBtn {
     background-color: #c00000;
+    transition: .10s;
 }
+#decrementBtn:active {
+    background-color: #8b0000;
+}
+
 #resetBtn {
     background-color: #3a3a3a;
+    transition: .10s;
 }
+#resetBtn:active {
+    background-color: #222222;
+}
+
 #saveBtn {
     background-color: #0000bd;
+    transition: .10s;
+}
+#saveBtn:active {
+    background-color: #000097;
 }
