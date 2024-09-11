@@ -1,5 +1,11 @@
-let saveEl = document.getElementById("saveEl")
-let countEl = document.getElementById("countEl")
+let saveEl = document.querySelector("#saveEl")
+let countEl = document.querySelector("#countEl")
+
+document.querySelector("#incrementBtn").addEventListener("click", increment);
+document.querySelector("#decrementBtn").addEventListener("click", decrement);
+document.querySelector("#resetBtn").addEventListener("click", reset);
+document.querySelector("#saveBtn").addEventListener("click", save);
+
 let count = 0;
 
 function increment() {

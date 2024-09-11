@@ -1,7 +1,7 @@
 html, body {
     padding: 0;
     margin: 0;
-    background-image: url(images/utaStation.jpg);
+    background-image: url(images/station.jpg);
     background-size: cover;
 }
 
@@ -23,17 +23,17 @@ button {
 }
 
 h1 {
-    color: white;
+    color: black;
     font-size: 2.5rem;
     margin: .8rem 0;
 }
 h2 {
-    color: white;
+    color: black;
     font-size: 3.5rem;
     margin: 0 0 1.5rem 0;
 }
 p {
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 
