@@ -1,0 +1,29 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 20px;
+}
+
+section#about {
+    background-color: #3a3a3a;
+    height: 100vh;
+}
+
+section#projects {
+    background-color: #525252;
+    height: 100vh;
+}
+
+section#contact {
+    background-color: #3a3a3a;
+    height: 100vh;
+}

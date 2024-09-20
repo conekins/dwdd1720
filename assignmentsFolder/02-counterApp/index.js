@@ -30,4 +30,4 @@ function save() {
     saveEl.innerText += " " + countStr;
     countEl.innerText = 0;
     count = 0;
-}
+} 
