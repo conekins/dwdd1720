@@ -8,9 +8,39 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: var(--lightWeight);
+    --lightWeight: 300;
+    --midWeight: 600;
+    --heavyWeight: 700;
+}
+
 nav {
     position: sticky;
-    top: 20px;
+    top: 0px;
+    background-color: #f8ebac;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: #990000;
+    font-weight: var(--heavyWeight);
+    font-size: 1.15rem;
+    text-decoration: none;
+    padding: 1.25rem 1rem;
+    display: block;
+    transition: .5s;
+}
+nav a:hover {
+    color: #6d0000;
+    background-color: #e6da9f;
 }
 
 section#about {
