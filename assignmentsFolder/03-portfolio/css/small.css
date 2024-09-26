@@ -14,12 +14,15 @@ body {
     --lightWeight: 300;
     --midWeight: 600;
     --heavyWeight: 700;
+    --primaryColor: #f8ebac;
+    --textColor: #fff7cf;
+    --secondaryTextColor: #990000;
 }
 
 nav {
     position: sticky;
     top: 0px;
-    background-color: #f8ebac;
+    background-color: var(--primaryColor );
 }
 
 nav ul {
@@ -30,9 +33,9 @@ nav ul {
 }
 
 nav a {
-    color: #990000;
+    color: var(--secondaryTextColor);
     font-weight: var(--heavyWeight);
-    font-size: 1.15rem;
+    font-size: .9rem;
     text-decoration: none;
     padding: 1.25rem 1rem;
     display: block;
@@ -46,6 +49,22 @@ nav a:hover {
 section#about {
     background-color: #3a3a3a;
     height: 100vh;
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#about h1 {
+    color: var(--textColor);
+    font-size: 2.5rem;
+    margin: 0;
+}
+section#about h2 {
+    color: var(--textColor);
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    margin: 0;
 }
 
 section#projects {
