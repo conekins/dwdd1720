@@ -17,6 +17,7 @@ body {
     --primaryColor: #f8ebac;
     --textColor: #fff7cf;
     --secondaryTextColor: #990000;
+    --tertiaryTextColor: #f73b3b;
 }
 
 nav {
@@ -68,8 +69,15 @@ section#about h2 {
 }
 
 section#projects {
-    background-color: #525252;
+    background-color: #313131;
     height: 100vh;
+    padding-top: 5rem;
+}
+section#projects h2 {
+    text-align: center;
+    color: var(--textColor);
+    margin: 0;
+
 }
 
 section#contact {
