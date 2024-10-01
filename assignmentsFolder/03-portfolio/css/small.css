@@ -73,11 +73,26 @@ section#projects {
     height: 100vh;
     padding-top: 5rem;
 }
+section#projects figure {
+    margin: 0;
+    width: 100%;
+}
+section#projects img {
+    width: 100%;
+    height: auto;
+}
+div.projectCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+div.projectCards a {
+    flex-basis: 100%;
+    padding: 1.25rem 10vw;
+}
 section#projects h2 {
     text-align: center;
     color: var(--textColor);
     margin: 0;
-
 }
 
 section#contact {

@@ -6,8 +6,13 @@
     section#about h1 {
         font-size: 4.5rem;
      }
-     section#about h2 {
+    section#about h2 {
         font-size: 2.5rem;
      }
+
+    div.projectCards a {
+        flex-basis: 33%;
+        padding: 1rem 1.25vw;
+    }
 
 } /* end media query*/
