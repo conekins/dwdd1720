@@ -18,6 +18,7 @@ body {
     --textColor: #fff7cf;
     --secondaryTextColor: #990000;
     --tertiaryTextColor: #f73b3b;
+    --tertiaryHover: #f56262;
 }
 
 nav {
@@ -86,8 +87,13 @@ div.projectCards {
     flex-wrap: wrap;
 }
 div.projectCards a {
+    color: var(--tertiaryTextColor);
     flex-basis: 100%;
     padding: 1.25rem 10vw;
+    transition: .5s;
+}
+div.projectCards a:hover {
+    color: var(--tertiaryHover);
 }
 section#projects h2 {
     text-align: center;
