@@ -71,7 +71,7 @@ section#about h2 {
 
 section#projects {
     background-color: #313131;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 5rem;
 }
 section#projects figure {
@@ -92,6 +92,13 @@ div.projectCards a {
     padding: 1.25rem 10vw;
     transition: .5s;
 }
+div.projectCards img {
+    border: 2px solid var(--primaryColor);
+    transition: .5s;
+}
+div.projectCards img:hover {
+    box-shadow: 0 0 20px var(--primaryColor);
+}
 div.projectCards a:hover {
     color: var(--tertiaryHover);
 }
@@ -104,4 +111,20 @@ section#projects h2 {
 section#contact {
     background-color: #3a3a3a;
     height: 100vh;
+}
+
+footer {
+    background-color: var(--primaryColor);
+    text-align: center;
+    color: var(--secondaryTextColor);
+    padding: .5rem 0 .5rem 0;
+    clear: both;
+}
+
+footer a {
+    color: var(--secondaryTextColor);
+    transition: .5s;
+}
+footer a:hover {
+    color: var(--tertiaryTextColor);
 }
