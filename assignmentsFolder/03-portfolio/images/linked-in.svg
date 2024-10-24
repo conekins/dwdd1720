@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg overflow="visible" baseProfile="tiny" version="1.2" viewBox="0 0 306 307" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-<path d="M108.27,100.44h59.65v28.07c9.52-16.04,31.08-33.09,60.15-33.08c64.16,0.01,75.19,42.61,75.19,95.74  s0,110.83,0,110.83H240.1v-97.02c0-25.34,0-54.06-32.08-54.06s-36.09,25.71-37.09,51.28V302h-62.66V100.44z" fill="#333333"/>
-<rect x="7.01" y="100.94" width="64.16" height="201.06" fill="#333333"/>
-<circle cx="38.19" cy="38.19" r="36.19" fill="#333333"/>
+<svg id="linked-in" xmlns="http://www.w3.org/2000/svg" width="301.26" height="300" viewBox="0 0 301.26 300">
+  <path id="Path_8" data-name="Path 8" d="M108.27,100.44h59.65v28.07c9.52-16.04,31.08-33.09,60.15-33.08,64.16.01,75.19,42.61,75.19,95.74V302H240.1V204.98c0-25.34,0-54.06-32.08-54.06s-36.09,25.71-37.09,51.28V302H108.27V100.44Z" transform="translate(-2 -2)" fill="#f8ebac"/>
+  <rect id="Rectangle_1" data-name="Rectangle 1" width="64.16" height="201.06" transform="translate(5.01 98.94)" fill="#f8ebac"/>
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="36.19" cy="36.19" r="36.19" transform="translate(0 0)" fill="#f8ebac"/>
 </svg>
