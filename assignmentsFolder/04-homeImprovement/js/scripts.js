@@ -1,3 +1,11 @@
+// Fat function to add list items
+let addLi = (list, message) => {
+    theList = document.querySelector(list);
+    let myListItem = document.createElement('li');
+    myListItem.textContent = message;
+    theList.appendChild(myListItem);
+} // End of the add list item function
+
 document.querySelector('#calculate').addEventListener('click', () => {
     const width = Number(document.querySelector('#width').value);
     console.log(width);
@@ -26,4 +34,12 @@ document.querySelector('#calculate').addEventListener('click', () => {
 
     let primer = ceiling + walls;
     console.log(primer + " Gallon(s) of primer");
+
+    addLi("#paint", `${primer} Gallon(s) of primer paint for the walls and ceiling`);
+    addLi("#paint", `${walls} Gallon(s) of semi-gloss paint for the walls`);
+    addLi("#paint", `${ceiling} Gallon(s) of flat paint for the ceiling`);
+
+    addLi("#carpet", `${carpet}yds of carpet`);
+    addLi("#carpet", `${carpet}yds of carpet padding`);
+    addLi("#carpet", `${tackstrip}ft. of tackstrip for the carpet`);
 }) //End of the calculate function
