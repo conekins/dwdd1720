@@ -7,6 +7,10 @@ let addLi = (list, message) => {
 } // End of the add list item function
 
 document.querySelector('#calculate').addEventListener('click', () => {
+    // clean out the existing list
+document.querySelector('#paint').innerHTML = "";
+document.querySelector('#carpet').innerHTML = "";
+
     const width = Number(document.querySelector('#width').value);
     console.log(width);
     const depth = Number(document.querySelector('#depth').value);
