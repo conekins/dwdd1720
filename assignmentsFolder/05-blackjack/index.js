@@ -1,5 +1,7 @@
-let firstCard = 10;
-let secondCard = 11;
+let firstCard = Math.ceil(Math.random () * 11);
+let secondCard = Math.ceil(Math.random () * 11);
+console.log(firstCard)
+console.log(secondCard)
 let hasBlackjack = false;
 let isAlive = true;
 
