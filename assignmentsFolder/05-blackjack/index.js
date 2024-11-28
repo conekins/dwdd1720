@@ -4,19 +4,21 @@ console.log(firstCard)
 console.log(secondCard)
 let hasBlackjack = false;
 let isAlive = true;
+let message = "";
 
 let sum = firstCard + secondCard;
 
 if (sum < 21) {
-    console.log("Would you like to draw another card or fold?");
+    message = "Would you like to draw or fold?";
 } else if (sum === 21) {
     hasBlackjack = true;
-    console.log("Congratulations, you have Blackjack!");
+    message = "Congratulations, you have BlackJack.";
 } else {
     isAlive = false;
-    console.log("We're sorry, you lose. Please try again.");
+    message = "We're sorry, please try again.";
 }
 
 // Cash out!
 console.log(isAlive);
 console.log(hasBlackjack);
+console.log(message);
