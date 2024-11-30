@@ -9,10 +9,10 @@ let message = "";
 let sum = firstCard + secondCard;
 
 if (sum < 21) {
-    message = "Would you like to draw or fold?";
+    message = `You have ${sum} Would you like to draw or fold?`;
 } else if (sum === 21) {
     hasBlackjack = true;
-    message = "Congratulations, you have BlackJack.";
+    message = "Congratulations, you have Blackjack.";
 } else {
     isAlive = false;
     message = "We're sorry, please try again.";
