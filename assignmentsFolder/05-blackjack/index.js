@@ -1,24 +1,28 @@
-let firstCard = Math.ceil(Math.random () * 11);
-let secondCard = Math.ceil(Math.random () * 11);
-console.log(firstCard)
-console.log(secondCard)
+document.getElementById("start").addEventListener("click", startGame);
+
 let hasBlackjack = false;
 let isAlive = true;
 let message = "";
+let messageEl = document.getElementById("messageEl");
+let sumEl = document.getElementById("sumEl");
 
-let sum = firstCard + secondCard;
+function startGame() {
+    const firstCard = Math.ceil(Math.random() * 11);
+    console.log(firstCard)
+    const secondCard = Math.ceil(Math.random() * 11);
+    console.log(secondCard)
+    const sum = firstCard + secondCard;
 
-if (sum < 21) {
-    message = `You have ${sum} Would you like to draw or fold?`;
-} else if (sum === 21) {
-    hasBlackjack = true;
-    message = "Congratulations, you have Blackjack.";
-} else {
-    isAlive = false;
-    message = "We're sorry, please try again.";
+    if (sum < 21) {
+        message = "Would you like to draw or fold?";
+    } else if (sum === 21) {
+        hasBlackjack = true;
+        message = "Congratulations, you have Blackjack.";
+    } else {
+        isAlive = false;
+        message = "We're sorry, please try again.";
+    }
+    sumEl.textContent = `Sum: ${sum}`;
+    messageEl.textContent = message;
+    console.log({ isAlive, hasBlackjack});
 }
-
-// Cash out!
-console.log(isAlive);
-console.log(hasBlackjack);
-console.log(message);
