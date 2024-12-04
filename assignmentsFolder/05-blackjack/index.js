@@ -1,10 +1,10 @@
-document.getElementById("start").addEventListener("click", startGame);
+document.querySelector("#start").addEventListener("click", startGame);
 
 let hasBlackjack = false;
 let isAlive = true;
 let message = "";
-let messageEl = document.getElementById("messageEl");
-let sumEl = document.getElementById("sumEl");
+let messageEl = document.querySelector("#messageEl");
+let sumEl = document.querySelector("#sumEl");
 
 function startGame() {
     const firstCard = Math.ceil(Math.random() * 11);
