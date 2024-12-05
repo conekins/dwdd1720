@@ -1,5 +1,5 @@
 document.querySelector("#start").addEventListener("click", startGame);
-document.querySelector("#newCard").addEventListener("click", drawCard)
+document.querySelector("#newCard").addEventListener("click", drawCard);
 let hasBlackjack = false;
 let isAlive = true;
 let message = "";
@@ -30,5 +30,5 @@ function startGame() {
 }
 
 function drawCard() {
-    
+    console.log("Card drawn, here's an ace on the house.")
 }
