@@ -1,16 +1,17 @@
 document.querySelector("#start").addEventListener("click", startGame);
-
+document.querySelector("#newCard").addEventListener("click", drawCard)
 let hasBlackjack = false;
 let isAlive = true;
 let message = "";
 let messageEl = document.querySelector("#messageEl");
+let cardsEl = document.querySelector("#cardsEl");
 let sumEl = document.querySelector("#sumEl");
 
 function startGame() {
     const firstCard = Math.ceil(Math.random() * 11);
-    console.log(firstCard)
+    console.log(firstCard);
     const secondCard = Math.ceil(Math.random() * 11);
-    console.log(secondCard)
+    console.log(secondCard);
     const sum = firstCard + secondCard;
 
     if (sum < 21) {
@@ -22,7 +23,12 @@ function startGame() {
         isAlive = false;
         message = "We're sorry, please try again.";
     }
+    cardsEl.textContent = `Cards: ${firstCard} & ${secondCard}`;
     sumEl.textContent = `Sum: ${sum}`;
     messageEl.textContent = message;
     console.log({ isAlive, hasBlackjack});
+}
+
+function drawCard() {
+    
 }

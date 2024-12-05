@@ -1,16 +1,30 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="blackjack.css">
-        <script src="index.js" defer></script>
-    </head>
-    <body>
-        <h1>Blackjack</h1>
-        <p id="messageEl">Want to play a round?</p>
-        <div class="values">
-        <p>Cards:</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="blackjack.css">
+    <script src="index.js" defer></script>
+    <title>Blackjack</title>
+</head>
+<body>
+    <h1>Blackjack</h1>
+    <p id="messageEl">Want to play a round?</p>
+    
+    <div class="values">
+        <p id="cardsEl">Cards:</p>
         <p id="sumEl">Sum:</p>
-        <button id="start">Start Game</button>
+        
+        <div id="buttons">
+            <button id="start">Start Game</button>
+            <button id="newCard">New Card</button>
         </div>
-    </body>
+    </div>
+</body>
+<footer>
+    <div id="footer">
+        <p>&copy; 2024 Connor Ekins. All rights reserved. | <a href="mailto:10935687@uvu.edu">Email Us</a></p>
+    </div>
+</footer>
 </html>
