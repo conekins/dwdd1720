@@ -1,19 +1,25 @@
+// Event listeners.
 document.querySelector("#start").addEventListener("click", startGame);
 document.querySelector("#newCard").addEventListener("click", drawCard);
-let hasBlackjack = false;
+
+// Global variables.
+let hasBlackJack = false;
 let isAlive = true;
 let message = "";
-let messageEl = document.querySelector("#messageEl");
-let cardsEl = document.querySelector("#cardsEl");
-let sumEl = document.querySelector("#sumEl");
+let sum = 0;
+let cards = [];
 
-function startGame() {
-    const firstCard = Math.ceil(Math.random() * 11);
-    console.log(firstCard);
-    const secondCard = Math.ceil(Math.random() * 11);
-    console.log(secondCard);
-    const sum = firstCard + secondCard;
+const messageEl = document.querySelector("#messageEl")
+const cardsEl = document.querySelector("#cardsEl")
+const sumEl = document.querySelector("#sumEl")
 
+// Random card generation
+function randomCard() {
+    return Math.ceil(Math.random() * 11)
+}
+
+// update the game status.
+function gameUpdate() {
     if (sum < 21) {
         message = "Would you like to draw or fold?";
     } else if (sum === 21) {
@@ -23,12 +29,28 @@ function startGame() {
         isAlive = false;
         message = "We're sorry, please try again.";
     }
-    cardsEl.textContent = `Cards: ${firstCard} & ${secondCard}`;
-    sumEl.textContent = `Sum: ${sum}`;
+    // Update the UI
     messageEl.textContent = message;
-    console.log({ isAlive, hasBlackjack});
+    sumEl.textContent = `Sum: ${sum}`;
+    cardsEl.textContent = `Cards: ${cards.join(" & ")}`;
+}
+
+function startGame() {
+    hasBlackJack = false;
+    isAlive = true;
+    cards = [randomCard(), randomCard()];
+    sum = cards.reduce((acc, card) => acc + card, 0);
+
+    // Call the gameUpdate function.
+    gameUpdate();
 }
 
 function drawCard() {
-    console.log("Card drawn, here's an ace on the house.")
+    if (isAlive && !hasBlackJack) {
+        const newCard = randomCard();
+        cards.push(newcard);
+        sum += newCard; 
+
+        gameUpdate();
+    }
 }

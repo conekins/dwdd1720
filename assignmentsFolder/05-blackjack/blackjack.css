@@ -13,8 +13,13 @@
 }
 
 body {
+    height: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: url("images/table.png") center / cover no-repeat;
+    min-height: 100vh;
+    background: url("images/table.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 h1 {
     color: var(--gold);
