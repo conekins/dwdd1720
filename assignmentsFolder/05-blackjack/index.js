@@ -48,7 +48,7 @@ function startGame() {
 function drawCard() {
     if (isAlive && !hasBlackJack) {
         const newCard = randomCard();
-        cards.push(newcard);
+        cards.push(newCard);
         sum += newCard; 
 
         gameUpdate();
