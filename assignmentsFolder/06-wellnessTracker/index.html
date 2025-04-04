@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wellness Tracker</title>
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/small.css">
@@ -12,9 +12,29 @@
 
 </head>
 <body>
-    
-
-
+    <div id="newProfile">
+        <p>Please complete your emotional profile.</p>
+        <form action="">
+            <label for="fName">First: <input type="text" name="first" id="fName" placeholder="First Name" required></label>
+            <label for="lName">Last: <input type="text" name="last" id="lName" placeholder="Last Name" required></label>
+            <label for="physical">Emotional State:
+                <select name="emotionalState" id="physical">
+                    <option value="https://openmoji.org/data/color/svg/1F603.svg">Happy</option>
+                    <option value="https://openmoji.org/data/color/svg/1F609.svg">Sassy</option>
+                    <option value="https://openmoji.org/data/color/svg/1F620.svg">Angry</option>
+                    <option value="https://openmoji.org/data/color/svg/1F971.svg">Bored</option>
+                </select>
+            </label>
+            <input type="submit" value="Save Profile" id="saveProfile">
+        </form>
+    </div>
+    <div id="myProfile">
+        <section>
+            <img src="#" alt="mood" id="emoji">
+            <p><span id="first">John</span> <span id="last">Doe</span> is currently feeling <span id="emotionalState">[Example]</span>.</p>
+        </section>
+        <button id="delete">— DELETE PROFILE —</button>
+    </div>
     <script src="js/scripts.js"></script>
 </body>
 </html>
