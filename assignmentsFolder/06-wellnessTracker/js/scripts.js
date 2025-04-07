@@ -11,3 +11,9 @@ saveBtn.addEventListener('click', () => {
     localStorage.setItem('wellness-last', ln.value);
     localStorage.setItem('wellness-emotion', emotionSelect.value);
 });
+
+document.querySelector('#first').textContent = localStorage.getItem('wellness-first');
+
+document.querySelector('#last').textContent = localStorage.getItem('wellness-last');
+
+document.querySelector('#emotionalState').textContent = localStorage.getItem('wellness-emotion');
