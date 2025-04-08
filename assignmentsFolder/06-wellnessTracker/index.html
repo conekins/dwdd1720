@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Tracker</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wellness Tracker</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/medium.css">
-    <link rel="stylesheet" href="css/large.css">
-
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/small.css" />
+  <link rel="stylesheet" href="css/medium.css" />
+  <link rel="stylesheet" href="css/large.css" />
 </head>
 <body>
-    <h1>Welcome to Your Exercise Tracker</h1>
-    <div id="newProfile">
-        <p>Please fill out your information.</p>
-        <form>
-        
-            <label for="fName">First: <input type="text" name="first" id="fName" placeholder="First Name" required></label>
-            <label for="lName">Last: <input type="text" name="last" id="lName" placeholder="Last Name" required></label>
-            <!-- Add the duration of the exercise here -->
+  <h1>Welcome to Your Exercise Tracker</h1>
 
-            <!-- Replace this with various exercise -->
-            <label for="physical">Type of Workout:
-                <select name="emotionalState" id="physical">
-                    <option value="https://openmoji.org/data/color/svg/1F603.svg">Happy</option>
-                    <option value="https://openmoji.org/data/color/svg/1F609.svg">Sassy</option>
-                    <option value="https://openmoji.org/data/color/svg/1F620.svg">Angry</option>
-                    <option value="https://openmoji.org/data/color/svg/1F971.svg">Bored</option>
-                </select>
-            </label>
+  <div id="newProfile">
+    <p>Please fill out your information.</p>
+    <form>
+      <label for="fName">
+        First:
+        <input type="text" name="first" id="fName" placeholder="First Name" required />
+      </label>
 
-            <input type="submit" value="Save Profile" id="saveBtn">
-        
-        </form>
-    </div>
-    <div id="myProfile">
-        <section>
-            <img src="#" alt="mood" id="emoji">
-            <p><span id="first">John</span> <span id="last">Doe</span> is currently feeling <span id="emotionalState">[Example]</span>.</p>
-        </section>
-        <button id="delete">— DELETE PROFILE —</button>
-    </div>
-    <script src="js/scripts.js"></script>
+      <label for="lName">
+        Last:
+        <input type="text" name="last" id="lName" placeholder="Last Name" required />
+      </label>
+
+      <label for="hours">
+        Hours:
+        <input type="text" name="hours" id="hours" placeholder="0" required />
+      </label>
+
+      <label for="minutes">
+        Minutes:
+        <input type="text" name="minutes" id="minutes" placeholder="0" required />
+      </label>
+
+      <label for="exerciseType">
+        Type of Workout:
+        <select name="exerciseType" id="exerciseType" required>
+          <option value="" disabled selected>-- Please Select An Option --</option>
+          <option value="Jumping Jacks">Jumping Jacks</option>
+          <option value="Wall Sits">Wall Sits</option>
+          <option value="Brisk Walk">Brisk Walk</option>
+          <option value="Yoga Stretch">Yoga Stretch</option>
+        </select>
+      </label>
+
+      <input type="submit" value="Save Profile" id="saveBtn" />
+    </form>
+  </div>
+
+  <div id="myProfile">
+    <section>
+      <img src="#" alt="workout icon" id="emoji" />
+      <p>
+        <span id="first">John</span>
+        <span id="last">Doe</span> did
+        <span id="exerciseType">[exercise]</span> for
+        <span id="hours">X</span> hours and
+        <span id="minutes">X</span> minutes.
+      </p>
+    </section>
+    <button id="delete">— DELETE PROFILE —</button>
+  </div>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>
