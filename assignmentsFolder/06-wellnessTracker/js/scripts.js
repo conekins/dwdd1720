@@ -4,6 +4,8 @@ const saveBtn = document.querySelector('#saveBtn');
 const deleteBtn = document.querySelector('#deleteBtn');
 
 saveBtn.addEventListener('click', () => {
+    event.preventDefault();
+
     let fn = document.querySelector('input[name="first"]');
     let ln = document.querySelector('input[name="last"]');
     let hrs = document.querySelector('input[name="hours"]');
@@ -18,14 +20,18 @@ saveBtn.addEventListener('click', () => {
     localStorage.setItem('exercise-last', ln.value);
     localStorage.setItem('exercise-hr', hrs.value);
     localStorage.setItem('exercise-min', min.value);
+
+    document.querySelector('#first').textContent = localStorage.getItem('exercise-first');
+    document.querySelector('#last').textContent = localStorage.getItem('exercise-last');
+    document.querySelector('#displayHours').textContent = localStorage.getItem('exercise-hr');
+    document.querySelector('#displayMinutes').textContent = localStorage.getItem('exercise-min');
 });
 
 deleteBtn.addEventListener('click', () => {
+    // Clear localStorage and reset the profile display
     localStorage.clear();
-})
-
-document.querySelector('#first').textContent = localStorage.getItem('exercise-first');
-document.querySelector('#last').textContent = localStorage.getItem('exercise-last');
-// Hours and minutes are being stored in localStorage but they are not being pulled and displayed.
-document.querySelector('#hours').textContent = localStorage.getItem('exercise-hr');
-document.querySelector('#minutes').textContent = localStorage.getItem('exercise-min');
+    document.querySelector('#first').textContent = 'John';
+    document.querySelector('#last').textContent = 'Doe';
+    document.querySelector('#hours').textContent = 'X';
+    document.querySelector('#minutes').textContent = 'X';
+});
