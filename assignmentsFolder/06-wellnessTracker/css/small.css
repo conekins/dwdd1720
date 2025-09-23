@@ -5,3 +5,92 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 label {display: block;}
+
+/* Switches */
+.hideMe {display: none;}
+.showMe {display: block;}
+
+body {
+    background-color: #cc2121;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+/* newProfile styling */
+#newProfile {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+#newProfile p {
+    color: #ffffff;
+    text-align: center;
+}
+
+#newProfile label {
+    color: #ffffff;
+}
+
+#newProfile input,
+#newProfile select {
+    margin-top: 0.5rem;
+}
+
+#newProfile input::placeholder {
+    color: #fff;
+}
+
+#newProfile input[type="text"],
+#newProfile select {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#newProfile input[type="submit"] {
+    color: #cc2121;
+    display: block;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: none;
+    background: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+#newProfile input[type="submit"]:hover {
+    background: #cc2121;
+    color: #222;
+}
+/* myProfile syling */
+
+#myProfile {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#myProfile img {
+
+}
+
+#myProfile p {
+
+}
+
+#myProfile button {
+
+}
