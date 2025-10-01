@@ -4,3 +4,77 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+:root {
+    --red-brick: #cd5c5c;
+    --red-crimson: #8b0000;
+    --red-rosewood: #65000b;
+
+    --tan-camel: #c19a6b;
+    --tan-linen: #faf0e6;
+    --tan-sand: #d2b48c;
+
+    --dark-black: #000;
+    --dark-charcoal: #1c1c1c;
+    --dark-onyx: #353535;
+}
+
+body {
+    background-color: var(--dark-charcoal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: var(--tan-sand);
+    color: var(--red-rosewood);
+
+    padding: 1rem;
+    text-align: center;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cards p {
+    color: var(--red);
+    background-color: var(--tan-sand);
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 1rem;
+
+    font-weight: 700;
+    text-transform: capitalize;
+
+    text-align: center;
+}
+
+#cards figure {
+    margin: .5rem 2%;
+    padding: 1rem;
+    flex-basis: 96%;
+
+    border: solid 1px var(--tan-sand);
+    border-radius: 5px;
+}
+
+#cards figcaption {
+    margin: 0;
+    padding: .5rem 0;
+
+    background-color: var(--tan-sand);
+    color: var(--dark-charcoal);
+
+    text-align: center;
+}
+
+#cards img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
