@@ -21,6 +21,8 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 body {
     background-color: var(--dark-charcoal);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -28,6 +30,7 @@ header {
     color: var(--red-rosewood);
 
     padding: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
 
     font-size: 1.5rem;
@@ -77,4 +80,18 @@ header {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+footer p {
+    color: var(--dark-charcoal);
+    background-color: var(--tan-sand);
+
+    text-align: center;
+    padding: 1rem 0;
+    margin: 2.5rem 0 0 0;
 }
