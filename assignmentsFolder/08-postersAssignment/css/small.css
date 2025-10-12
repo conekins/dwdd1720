@@ -4,3 +4,43 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+body.paintRed div {
+    background-color: red;
+}
+
+body.paintGreen div {
+    background-color: green;
+}
+
+
+/* button swtich */
+
+body.paintRed section #redImage {
+    display: none;
+}
+body.paintRed section #greenImage {
+    display: block;
+}
+
+body.paintGreen section #greenImage {
+    display: none;
+}
+body.paintGreen section #redImage {
+    display: block;
+}
+
+body.paintGreen .parent {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+body.paintGreen .parent section {
+    color: red;
+}
+
+body.paintRed .parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+body.paintRed .parent section {
+    color: green;
+}
