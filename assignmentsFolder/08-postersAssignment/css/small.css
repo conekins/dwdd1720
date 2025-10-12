@@ -4,6 +4,10 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+.is-hidden {
+    display: none;
+}
+
 body.paintRed div {
     background-color: red;
 }
@@ -12,35 +16,38 @@ body.paintGreen div {
     background-color: green;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
 
-/* button swtich */
+#listIcon, #gridIcon {
+    width: 64px;
+    height: 64px;
+}
 
-body.paintRed section #redImage {
+/* button switch */
+
+body.grid section #gridIcon {
     display: none;
 }
-body.paintRed section #greenImage {
+body.grid section #listIcon {
     display: block;
 }
 
-body.paintGreen section #greenImage {
+body.list section #listIcon {
     display: none;
 }
-body.paintGreen section #redImage {
+body.list section #gridIcon {
     display: block;
 }
 
-body.paintGreen .parent {
+body.list .parent {
     display: grid;
     grid-template-columns: 1fr;
 }
-body.paintGreen .parent section {
-    color: red;
-}
 
-body.paintRed .parent {
+body.grid .parent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-body.paintRed .parent section {
-    color: green;
 }
