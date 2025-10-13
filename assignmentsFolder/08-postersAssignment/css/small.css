@@ -4,26 +4,110 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+:root {
+    --red-brick: #cd5c5c;
+    --red-crimson: #8b0000;
+    --red-rosewood: #65000b;
+
+    --tan-camel: #c19a6b;
+    --tan-linen: #faf0e6;
+    --tan-sand: #d2b48c;
+
+    --dark-black: #000;
+    --dark-charcoal: #1c1c1c;
+    --dark-onyx: #353535;
+
+    --white: #fff;
+    --grey-light: #f0f0f0;
+    --grey-medium: #ccc;
+}
+
 .is-hidden {
     display: none;
 }
 
-body.paintRed div {
-    background-color: red;
-}
-
-body.paintGreen div {
-    background-color: green;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
+    background-color: var(--dark-charcoal);
     display: flex;
     justify-content: space-between;
+}
+header h1 {
+    color: var(--grey-light);
+    margin: auto 1rem;
+    padding: 0;
+}
+header section {
+    margin: 1rem;
+    padding: 0;
 }
 
 #listIcon, #gridIcon {
     width: 64px;
     height: 64px;
+}
+
+/* Posters container: see index.html -> #posters (main) */
+#posters {
+    padding: 0;
+    gap: 0;
+}
+
+/* Individual poster figure */
+#posters figure {
+    padding: 0;
+    margin: 1rem;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--dark-onyx);
+    border-radius: 6px;
+    filter: drop-shadow(10px 10px 5px #888);
+}
+
+#posters .details, #posters .director, #posters .producer, #posters .releaseDate {
+    background-color: var(--dark-charcoal);
+    color: var(--grey-light);
+    margin: 0;
+    padding: .25rem 0;
+}
+#posters .details {
+    padding: 1rem;
+}
+
+#posters p.movieTitle {
+    background-color: var(--dark-charcoal);
+    color: var(--grey-light);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.75rem 0;
+    border-radius: 5px 5px 0 0;
+}
+
+#posters img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figure.poster img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
+figure.poster h2 {
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+}
+
+figure.poster p {
+    margin: 0.15rem 0;
+    font-size: 0.9rem;
+    color: #333;
 }
 
 /* button switch */
@@ -45,7 +129,16 @@ body.list section #gridIcon {
 body.list #posters {
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: center; /* center each grid item horizontally */
+    align-items: center;   /* center items vertically if container has height */
 }
+body.list figure {
+    width: 75%;
+    height: auto;
+    margin: 1rem;
+    text-align: center; /* ensure internal text is centered */
+}
+
 body.grid #posters {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -19,35 +19,38 @@ listBtn.addEventListener('click', () => {
     gridBtn.classList.remove("is-hidden");
 });
 
-for (let x = 0; x < films.length; x++) {
-    // create the div for each film
-    const barDiv = document.createElement('div');
-    barDiv.innerHTML = `<p>${films[x].title}</p>`;
+// Render films into the #posters container using a DocumentFragment for performance
+const fragment = document.createDocumentFragment();
+for (const film of films) {
+    const { title, episode_id, director: dir, producer: prod, release_date } = film;
 
-    // movie poster images
-    let myImage = document.createElement('img');
-    myImage.setAttribute("src", pathStart + films[x].episode_id + ".webp");
-    myImage.setAttribute("alt", films[x].title);
+    const titleDiv = document.createElement('div');
+    titleDiv.innerHTML = `<p class="movieTitle">${title}</p>`;
 
-    // director
+    const img = document.createElement('img');
+    img.src = `${pathStart}${episode_id}.webp`;
+    img.alt = title;
+
     const director = document.createElement('p');
-    director.innerHTML = `Director: ${films[x].director}`;
+    director.className = 'director';
+    director.textContent = `Director: ${dir}`;
 
-    // producer
     const producer = document.createElement('p');
-    producer.innerHTML = `Producer: ${films[x].producer}`;
-    
-    // release_date
-    const realeaseDate = document.createElement('p');
-    realeaseDate.innerHTML = `Release Date: ${films[x].release_date}`;
+    producer.className = 'producer';
+    producer.textContent = `Producer: ${prod}`;
 
-    let myFigure = document.createElement('figure');
+    const releaseDate = document.createElement('p');
+    releaseDate.className = 'releaseDate';
+    releaseDate.textContent = `Release Date: ${release_date}`;
 
-    myFigure.appendChild(barDiv);
-    myFigure.appendChild(myImage);
-    myFigure.appendChild(director);
-    myFigure.appendChild(producer);
-    myFigure.appendChild(realeaseDate);
+    const details = document.createElement('div');
+    details.className = 'details';
+    details.append(director, producer, releaseDate);
 
-    myTarget.appendChild(myFigure);
-}; // end of loop
+    const figure = document.createElement('figure');
+    figure.className = 'poster';
+    figure.append(titleDiv, img, details);
+
+    fragment.appendChild(figure);
+}
+myTarget.appendChild(fragment);
