@@ -40,7 +40,14 @@ for (let x = 0; x < films.length; x++) {
     // release_date
     const realeaseDate = document.createElement('p');
     realeaseDate.innerHTML = `Release Date: ${films[x].release_date}`;
-    console.log(realeaseDate)
 
-    
+    let myFigure = document.createElement('figure');
+
+    myFigure.appendChild(barDiv);
+    myFigure.appendChild(myImage);
+    myFigure.appendChild(director);
+    myFigure.appendChild(producer);
+    myFigure.appendChild(realeaseDate);
+
+    myTarget.appendChild(myFigure);
 }; // end of loop
