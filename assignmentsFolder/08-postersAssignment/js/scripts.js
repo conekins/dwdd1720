@@ -1,3 +1,8 @@
+import {films} from '../data/films.js'
+
+const pathStart = "https://starwars.dgmuvu.com/films/"
+const myTarget = document.querySelector("#posters");
+
 const gridBtn = document.querySelector("#gridIcon");
 const listBtn = document.querySelector("#listIcon");
 
@@ -13,3 +18,29 @@ listBtn.addEventListener('click', () => {
     listBtn.classList.add("is-hidden");
     gridBtn.classList.remove("is-hidden");
 });
+
+for (let x = 0; x < films.length; x++) {
+    // create the div for each film
+    const barDiv = document.createElement('div');
+    barDiv.innerHTML = `<p>${films[x].title}</p>`;
+
+    // movie poster images
+    let myImage = document.createElement('img');
+    myImage.setAttribute("src", pathStart + films[x].episode_id + ".webp");
+    myImage.setAttribute("alt", films[x].title);
+
+    // director
+    const director = document.createElement('p');
+    director.innerHTML = `Director: ${films[x].director}`;
+
+    // producer
+    const producer = document.createElement('p');
+    producer.innerHTML = `Producer: ${films[x].producer}`;
+    
+    // release_date
+    const realeaseDate = document.createElement('p');
+    realeaseDate.innerHTML = `Release Date: ${films[x].release_date}`;
+    console.log(realeaseDate)
+
+    
+}; // end of loop

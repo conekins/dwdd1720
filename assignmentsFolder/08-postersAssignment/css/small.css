@@ -42,12 +42,11 @@ body.list section #gridIcon {
     display: block;
 }
 
-body.list .parent {
+body.list #posters {
     display: grid;
     grid-template-columns: 1fr;
 }
-
-body.grid .parent {
+body.grid #posters {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
