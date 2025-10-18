@@ -1,4 +1,4 @@
-export const xxx =
+export const people =
 [
     {
         "name": "Luke Skywalker",
