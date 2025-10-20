@@ -1,6 +1,6 @@
-import {films} from '../data/films.js'
+import {films} from '../data/films.js';
 
-const pathStart = "https://starwars.dgmuvu.com/films/"
+const pathStart = "https://starwars.dgmuvu.com/films/";
 const myTarget = document.querySelector("#posters");
 
 const gridBtn = document.querySelector("#gridIcon");
@@ -52,5 +52,5 @@ for (const film of films) {
     figure.append(titleDiv, img, details);
 
     fragment.appendChild(figure);
-}
+};
 myTarget.appendChild(fragment);
