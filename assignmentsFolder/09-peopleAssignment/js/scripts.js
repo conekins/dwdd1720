@@ -12,12 +12,12 @@ allPeopleBtn.addEventListener('click', () => displayPeople(people));
 // create a female button with filter
 const femaleBtn = document.createElement('button');
 femaleBtn.textContent = "Female Filter";
-femaleBtn.addEventListener('click', () => placeHolder);
+femaleBtn.addEventListener('click', () => placeHolder); // replace placeholder
 
 // create a male button with filter
 const maleBtn = document.createElement('button');
 maleBtn.textContent = "Male Filter";
-maleBtn.addEventListener('click', () => placeHolder);
+maleBtn.addEventListener('click', () => placeHolder); // replace placeholder filtering 04:45
 
 // add buttons to page
 myNav.appendChild(allPeopleBtn);
