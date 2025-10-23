@@ -12,20 +12,36 @@ allPeopleBtn.addEventListener('click', () => displayPeople(people));
 // create a female button with filter
 const femaleBtn = document.createElement('button');
 femaleBtn.textContent = "Female Filter";
-femaleBtn.addEventListener('click', () => placeHolder); // replace placeholder
+femaleBtn.addEventListener('click', () => {
+    const arrayFemale = people.filter(person => person.gender === "female");
+    displayPeople(arrayFemale);
+});
 
 // create a male button with filter
 const maleBtn = document.createElement('button');
 maleBtn.textContent = "Male Filter";
-maleBtn.addEventListener('click', () => placeHolder); // replace placeholder filtering 04:45
+maleBtn.addEventListener('click', () => {
+    const arrayMale = people.filter(person => person.gender === "male");
+    displayPeople(arrayMale);
+});
+
+const otherBtn = document.createElement('button');
+otherBtn.textContent = "Other Filter";
+otherBtn.addEventListener('click', () => {
+    const arrayOther = people.filter(person => person.gender === "n/a" || person.gender === "none" || person.gender === "hermaphrodite");
+    displayPeople(arrayOther);
+});
+
 
 // add buttons to page
 myNav.appendChild(allPeopleBtn);
 myNav.appendChild(femaleBtn);
 myNav.appendChild(maleBtn);
+myNav.appendChild(otherBtn);
 
 // loop through all the people
 function displayPeople(x) {
+    myParent.textContent = ''; // clear previous content
     x.forEach(person => {
         const myFigure = document.createElement('figure');
 
