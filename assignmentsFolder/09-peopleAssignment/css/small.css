@@ -11,14 +11,14 @@ html, body {
 
 :root {
     /* Red color palette */
-    --red-brick: #cd5c5c;
-    --red-crimson: #8b0000;
     --red-rosewood: #65000b;
+    --red-crimson: #8b0000;
+    --red-brick: #cd5c5c;
 
     /* tan color palette */
     --tan-camel: #c19a6b;
-    --tan-linen: #faf0e6;
     --tan-sand: #d2b48c;
+    --tan-linen: #faf0e6;
 
     /* dark color palete */
     --dark-black: #000;
@@ -32,18 +32,17 @@ html, body {
 
     /* Star Wars inspired color palette */
     --star-wars-yellow: #ffd306;
-    --muted-star-wars-yellow: #d8b209;
 
-    --jedi-blue: #2b6ca3;
     --rebel-steel: #4b6e82;
+    --jedi-blue: #2b6ca3;
     --tatooine-sky: #5f7fae;
 
     --royal-crimson: #8e1e2b;
     --desert-rose: #c6786d;
     --amethyst: #7c5da3;
 
-    --plasteel-grey: #6d6e71;
     --gunmetal: #3b3b3b;
+    --plasteel-grey: #6d6e71;
     --copper-circuit: #a67c52;
 }
 
@@ -122,38 +121,42 @@ button.otherBtn {
 #peopleCards figure {
     width: 150px;
     
-    margin: 10px;
+    margin: 1.5rem;
     padding: 0;
+}
+
+#peopleCards figure figcaption {
+    font-weight: 500;
+
+    margin: 0;
+    padding: 5px;
 }
 
 #peopleCards figure.male figcaption {
+    background-color: var(--tatooine-sky);
     color: var(--white);
+
     text-align: center;
 
-    margin: 0;
-    padding: 0;
-
-    border: solid 4px var(--tatooine-sky);
+    border-radius: 5px;
 }
 
 #peopleCards figure.female figcaption {
-    color: var(--white);
+    background-color: var(--desert-rose);
+    color: var(--dark-black);
+
     text-align: center;
 
-    margin: 0;
-    padding: 0;
-
-    border: solid 4px var(--desert-rose);
+    border-radius: 5px;
 }
 
 #peopleCards figure.other figcaption {
+    background-color: var(--plasteel-grey);
     color: var(--white);
+
     text-align: center;
 
-    margin: 0;
-    padding: 0;
-
-    border: solid 4px var(--plasteel-grey);
+    border-radius: 5px;
 }
 
 #peopleCards img {
@@ -161,6 +164,8 @@ button.otherBtn {
     padding: 0;
 
     width: 100%;
+
+    border-radius: 5px;
 }
 
 footer {
