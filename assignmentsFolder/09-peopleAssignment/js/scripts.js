@@ -6,11 +6,13 @@ const myParent = document.querySelector('#peopleCards');
 
 // create an all people button
 const allPeopleBtn = document.createElement('button');
+allPeopleBtn.className = "allBtn";
 allPeopleBtn.textContent = "All people";
 allPeopleBtn.addEventListener('click', () => displayPeople(people));
 
 // create a female button with filter
 const femaleBtn = document.createElement('button');
+femaleBtn.className = "femaleBtn";
 femaleBtn.textContent = "Female Filter";
 femaleBtn.addEventListener('click', () => {
     const arrayFemale = people.filter(person => person.gender === "female");
@@ -19,6 +21,7 @@ femaleBtn.addEventListener('click', () => {
 
 // create a male button with filter
 const maleBtn = document.createElement('button');
+maleBtn.className = "maleBtn";
 maleBtn.textContent = "Male Filter";
 maleBtn.addEventListener('click', () => {
     const arrayMale = people.filter(person => person.gender === "male");
@@ -26,9 +29,10 @@ maleBtn.addEventListener('click', () => {
 });
 
 const otherBtn = document.createElement('button');
+otherBtn.className = "otherBtn";
 otherBtn.textContent = "Other Filter";
 otherBtn.addEventListener('click', () => {
-    const arrayOther = people.filter(person => person.gender === "n/a" || person.gender === "none" || person.gender === "hermaphrodite");
+    const arrayOther = people.filter(person => person.gender != "male" && person.gender != "female");
     displayPeople(arrayOther);
 });
 

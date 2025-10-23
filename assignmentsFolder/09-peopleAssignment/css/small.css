@@ -10,55 +10,113 @@ html, body {
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 :root {
+    /* Red color palette */
     --red-brick: #cd5c5c;
     --red-crimson: #8b0000;
     --red-rosewood: #65000b;
 
+    /* tan color palette */
     --tan-camel: #c19a6b;
     --tan-linen: #faf0e6;
     --tan-sand: #d2b48c;
 
+    /* dark color palete */
     --dark-black: #000;
     --dark-charcoal: #1c1c1c;
     --dark-onyx: #353535;
 
+    /* light color palette */
     --white: #fff;
     --grey-light: #f0f0f0;
     --grey-medium: #ccc;
 
-    --color-male: #0068c9;
-    --color-female: #ff7575;
+    /* Star Wars inspired color palette */
+    --star-wars-yellow: #ffd306;
+    --muted-star-wars-yellow: #d8b209;
+
+    --jedi-blue: #2b6ca3;
+    --rebel-steel: #4b6e82;
+    --tatooine-sky: #5f7fae;
+
+    --royal-crimson: #8e1e2b;
+    --desert-rose: #c6786d;
+    --amethyst: #7c5da3;
+
+    --plasteel-grey: #6d6e71;
+    --gunmetal: #3b3b3b;
+    --copper-circuit: #a67c52;
 }
 
 body {
     background-color: var(--dark-charcoal);
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Make the page a column flex container so footer can stick to the bottom
-   when content is short. Keep this minimal to avoid changing layout elsewhere. */
-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body nav button {
-    padding: 10px;
-    margin: 5px;
-}
-
-h1 {
-    color: var(--white);
+header {
+    background-color: var(--star-wars-yellow);
+    color: var(--dark-black);
     
     text-align: center;
+
+    margin-bottom: 1rem;
+    padding: .5rem;
 }
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 1rem 0;
+    padding: 0;
+}
+
+nav button {
+    padding: 10px;
+    margin: 5px;
+
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+button.allBtn {
+    background-color: var(--star-wars-yellow);
+    color: var(--dark-black);
+    border: none;
+    border-radius: 5px;
+}
+button.maleBtn {
+    background-color: var(--tatooine-sky);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
+button.femaleBtn {
+    background-color: var(--desert-rose);
+    color: var(--dark-black);
+    border: none;
+    border-radius: 5px;
+}
+button.otherBtn {
+    background-color: var(--plasteel-grey);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
+
+
 
 #peopleCards {
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
 }
 
 #peopleCards figure {
@@ -75,7 +133,7 @@ h1 {
     margin: 0;
     padding: 0;
 
-    border: solid 4px var(--color-male);
+    border: solid 4px var(--tatooine-sky);
 }
 
 #peopleCards figure.female figcaption {
@@ -85,7 +143,7 @@ h1 {
     margin: 0;
     padding: 0;
 
-    border: solid 4px var(--color-female);
+    border: solid 4px var(--desert-rose);
 }
 
 #peopleCards figure.other figcaption {
@@ -95,7 +153,7 @@ h1 {
     margin: 0;
     padding: 0;
 
-    border: solid 4px var(--grey-medium);
+    border: solid 4px var(--plasteel-grey);
 }
 
 #peopleCards img {
@@ -106,8 +164,10 @@ h1 {
 }
 
 footer {
-    color: var(--dark-charcoal);
-    background-color: var(--grey-light);
+    background-color: var(--star-wars-yellow);
+    color: var(--dark-black);
+
+    font-weight: 700;
 
     text-align: center;
 
