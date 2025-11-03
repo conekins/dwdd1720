@@ -10,32 +10,29 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     --red-crimson: #8b0000;
     --red-brick: #cd5c5c;
 
-    /* tan color palette */
+    /* Tan color palette */
     --tan-camel: #c19a6b;
     --tan-sand: #d2b48c;
     --tan-linen: #faf0e6;
 
-    /* dark color palete */
-    --dark-black: #000;
+    /* Dark color palette */
+    --black: #000;
     --dark-charcoal: #1c1c1c;
     --dark-onyx: #353535;
 
-    /* light color palette */
+    /* Light color palette */
     --white: #fff;
     --grey-light: #f0f0f0;
     --grey-medium: #ccc;
 
     /* Star Wars inspired color palette */
     --star-wars-yellow: #ffd306;
-
     --rebel-steel: #4b6e82;
     --jedi-blue: #2b6ca3;
     --tatooine-sky: #5f7fae;
-
     --royal-crimson: #8e1e2b;
     --desert-rose: #c6786d;
     --amethyst: #7c5da3;
-
     --gunmetal: #3b3b3b;
     --plasteel-grey: #6d6e71;
     --copper-circuit: #a67c52;
@@ -54,85 +51,99 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 body {
     background-color: var(--dark-charcoal);
     color: var(--white);
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
     background-color: var(--white);
-    color: var(--dark-black);
-
+    color: var(--black);
     text-align: center;
-
+    width: 100%;
     margin-bottom: 1rem;
     padding: .5rem 0;
 }
 
 nav {
     display: flex;
-    justify-content: space-evenly;
-
-    margin: 1rem 0;
-    padding: 0;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
 }
 
 nav button {
+    width: 100%;
+    margin: 1rem 0;
     padding: 10px;
-
     text-transform: uppercase;
     font-weight: bold;
 }
 
-/* give each filter button a clear color and hover states */
-.allBtn {
-    background: var(--grey-medium);
-    color: var(--dark-black);
-    border: 2px solid transparent;
+/* Filter buttons */
+.allBtn,
+.maleBtn,
+.femaleBtn,
+.republicanBtn,
+.democratBtn {
+    border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
 }
 
+.allBtn {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid transparent;
+}
+
 .maleBtn {
     background: var(--gender-male);
     color: var(--white);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
 }
 
 .femaleBtn {
     background: var(--gender-female);
     color: var(--white);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
 }
 
 .republicanBtn {
     background: var(--party-republican);
     color: var(--white);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
 }
 
 .democratBtn {
     background: var(--party-democrat);
     color: var(--white);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
 }
 
 div#senatorCards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-items: center;
+}
+
+#senatorCards h3 {
+    text-align: center;
+}
+
+#senatorCards figure {
+    width: 300px;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+}
+
+#senatorCards img {
+    width: 100%;
+}
+
+#senatorCards figcaption {
+    color: var(--white);
+    text-align: center;
+    padding: .5rem 0;
 }

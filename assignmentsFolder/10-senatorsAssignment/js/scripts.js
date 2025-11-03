@@ -9,7 +9,7 @@ const myParent = document.querySelector('#senatorCards');
 // all senators filter
 const allBtn = document.createElement('button');
 allBtn.className = 'allBtn';
-allBtn.textContent = 'all senators';
+allBtn.textContent = 'all';
 allBtn.addEventListener('click', () => displaySenators(senator));
 
 // male senators filter
@@ -76,16 +76,16 @@ function displaySenators(x) {
         const captionEl = document.createElement('figcaption');
         captionEl.textContent = `${partyEl} from ${stateEl}`;
 
-        const phoneEl = document.createElement('p');
-        phoneEl.textContent = senator.phone;
+        const phoneEl = document.createElement('figcaption');
+        phoneEl.textContent = `Phone: ${senator.phone}`;
 
-        const birthEl = document.createElement('p');
+        const birthEl = document.createElement('figcaption');
         birthEl.textContent = `Date of Birth: ${senator.date_of_birth}`;
 
-        const twitterEl = document.createElement('p');
+        const twitterEl = document.createElement('figcaption');
         twitterEl.textContent = `Twitter Account: ${senator.twitter_account}`;
 
-        const youtubeEl = document.createElement('p');
+        const youtubeEl = document.createElement('figcaption');
         youtubeEl.textContent = `YouTube Account: ${senator.youtube_account}`;
 
         // assign gender class
