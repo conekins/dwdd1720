@@ -21,9 +21,11 @@ function populateNav(allShips) {
 };
 
 function displayShip(ship) {
+  // start the figure as blank and create it
   myViewer.textContent = '';
   let myFigure = document.createElement('figure');
 
+  // assemble the img
   let myImg = document.createElement('img');
   const explodedArray = ship.url.split('/');
   console.log(explodedArray);
@@ -31,11 +33,18 @@ function displayShip(ship) {
   myImg.src = `https://starwars.dgmuvu.com/ships/${charNumber}.jpg`;
   myImg.alt = ship.name;
 
+  // error checking for image
+  myImg.addEventListener('error', () => {
+    console.log('image not found');
+  }); // Error-Handling 
+
   let myCaption = document.createElement('figcaption');
   myCaption.textContent = `${ship.name}`;
 
+  // assemble the figure
   myFigure.appendChild(myImg);
   myFigure.appendChild(myCaption);
 
+  // add the figure to the HTML
   myViewer.appendChild(myFigure);
 };
