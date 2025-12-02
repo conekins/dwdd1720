@@ -35,8 +35,9 @@ function displayShip(ship) {
 
   // error checking for image
   myImg.addEventListener('error', () => {
-    console.log('image not found');
-  }); // Error-Handling 
+    myImg.src = 'https://starwars.dgmuvu.com/ships/placeholder.jpg';
+    myCaption.textContent = `${ship.name} has crashed on an unknown planet!`;
+  });
 
   let myCaption = document.createElement('figcaption');
   myCaption.textContent = `${ship.name}`;
