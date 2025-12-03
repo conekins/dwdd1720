@@ -1,4 +1,28 @@
 @media only screen and (min-width: 35rem) {
 
+    body {
+        display: grid;
+        /* widen the left nav column so buttons have more room */
+        grid-template-columns: 240px auto;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav button {
+        margin: .5rem 0;
+    }
+
+    header {
+        grid-column: 1 / span 2;
+    }
     
+    main figure {
+        position: sticky;
+        top: 1rem;
+        right: 1rem;
+        z-index: 10;
+    }
+
 } /* end media query*/

@@ -5,7 +5,6 @@ const myViewer = document.querySelector('main');
 fetch("../data/starships.json")
   .then((response) => response.json())
   .then((shipArray) => {
-    console.log(shipArray);
     populateNav(shipArray);
   });
 
@@ -28,7 +27,6 @@ function displayShip(ship) {
   // assemble the img
   let myImg = document.createElement('img');
   const explodedArray = ship.url.split('/');
-  console.log(explodedArray);
   const charNumber = explodedArray[5];
   myImg.src = `https://starwars.dgmuvu.com/ships/${charNumber}.jpg`;
   myImg.alt = ship.name;
