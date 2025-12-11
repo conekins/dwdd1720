@@ -1,3 +1,6 @@
+// refs to the HTML
+const parentTag = document.querySelector('#weatherCard');
+
 // writing a default zip-code with local storage
 let zip = localStorage.getItem('myZipCode');
 if (zip == null) {
@@ -16,17 +19,47 @@ const myPath = `https://api.openweathermap.org/data/2.5/weather?zip=${zip},us&ap
 fetch(myPath)
     .then((response) => response.json())
     .then((allData) => {
-        // console.log(allData);
+        console.log(allData);
         displayWeather(allData);
     });
 
 // function that displays the current weather
 function displayWeather(weatherResults) {
-    console.log(weatherResults.weather[0].icon);
     imgPath = weatherResults.weather[0].icon;
 
+    // current date
+    const currentDate = document.createElement('p');
+    currentDate.className = 'date';
+    const d = new Date();
+    currentDate.textContent = d.toDateString();
+
+    // current temperature
+    const currentTemp = document.createElement('p');
+    currentTemp.className = 'temp';
+    currentTemp.textContent = weatherResults.main.temp + ' °F';
+
+    // weather description
+    const weatherDesc = document.createElement('p');
+    const desc = weatherResults.weather[0].description;
+    weatherDesc.className = 'description';
+    weatherDesc.textContent = `The weather is currently ${desc}.`;
+
+    // weather icon
     const weatherIcon = document.createElement('img');
-    weatherIcon.src = `https://openweathermap.org/img/wn/${imgPath}@2x.png`
+
+    // wind speed
+    const windSpeed = document.createElement('p');
+    windSpeed.className = 'windSpeed';
+    windSpeed.textContent = `Wind Speed: ${weatherResults.wind.speed} mph`;
+
+    weatherIcon.src = `https://openweathermap.org/img/wn/${imgPath}@2x.png`;
+    weatherIcon.alt = weatherResults.weather[0].description;
+
+    parentTag.appendChild(currentDate);
+    parentTag.appendChild(weatherIcon);
+    parentTag.appendChild(weatherDesc);
+    parentTag.appendChild(windSpeed);
+    parentTag.appendChild(currentTemp);
 };
 
 // ask for a new zipcode
