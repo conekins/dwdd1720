@@ -40,7 +40,7 @@ function displayWeather(weatherResults) {
     // current temperature
     const currentTemp = document.createElement('p');
     currentTemp.className = 'temp';
-    currentTemp.textContent = weatherResults.main.temp + ' °F';
+    currentTemp.innerHTML = weatherResults.main.temp + ' &#8457;';
 
     // weather description
     const weatherDesc = document.createElement('p');
@@ -64,8 +64,8 @@ function displayWeather(weatherResults) {
     const tempMax = document.createElement('p');
     tempMin.className = 'min';
     tempMax.className = 'max';
-    tempMin.textContent = `Low: ${weatherResults.main.temp_min} °F`;
-    tempMax.textContent = `High: ${weatherResults.main.temp_max} °F`;
+    tempMin.innerHTML = `Low: ${weatherResults.main.temp_min} &#8457;`;
+    tempMax.innerHTML = `High: ${weatherResults.main.temp_max} &#8457;`;
 
     parentTag.appendChild(currentDate);
     parentTag.appendChild(weatherIcon);
