@@ -27,6 +27,10 @@ fetch(myPath)
 function displayWeather(weatherResults) {
     imgPath = weatherResults.weather[0].icon;
 
+    // change the header to display the town name
+    const myTown = document.querySelector('#town');
+    myTown.textContent = `Current Weather for ${weatherResults.name}`;
+
     // current date
     const currentDate = document.createElement('p');
     currentDate.className = 'date';
@@ -55,13 +59,46 @@ function displayWeather(weatherResults) {
     weatherIcon.src = `https://openweathermap.org/img/wn/${imgPath}@2x.png`;
     weatherIcon.alt = weatherResults.weather[0].description;
 
+    // temp min and max
+    const tempMin = document.createElement('p');
+    const tempMax = document.createElement('p');
+    tempMin.className = 'min';
+    tempMax.className = 'max';
+    tempMin.textContent = `Low: ${weatherResults.main.temp_min} °F`;
+    tempMax.textContent = `High: ${weatherResults.main.temp_max} °F`;
+
     parentTag.appendChild(currentDate);
     parentTag.appendChild(weatherIcon);
-    parentTag.appendChild(weatherDesc);
-    parentTag.appendChild(windSpeed);
-    parentTag.appendChild(currentTemp);
+    parentTag.appendChild(weatherDesc); // 1
+    parentTag.appendChild(windSpeed); // 2
+    parentTag.appendChild(currentTemp); // 3
+    parentTag.appendChild(tempMin); // 4
+    parentTag.appendChild(tempMax); // 5
 };
 
 // ask for a new zipcode
+const theModalBox = document.querySelector('aside');
+const settingsIcon = document.querySelector('#settings');
+
+settingsIcon.addEventListener('click', () => {
+    theModalBox.classList.toggle('show');
+});
+
+// set a new zip
+const myButton = document.querySelector('#applyZip');
+myButton.addEventListener('click', () => {
+    theModalBox.className = '';
+
+    let newZip = document.querySelector('#newZip').value;
+    if (newZip.length === 5) {
+        localStorage.setItem('myZipCode', newZip);
+    };
+
+    location.reload();
+});
 
 // data validation for the zip-code character length
+myInput = document.querySelector('#newZip');
+myInput.addEventListener('input', () => {
+    myInput.value = myInput.value.slice(0, 5)
+});
